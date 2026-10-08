@@ -68,3 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+// Add or replace at the bottom of js/main.js
+function openPdfModal(pdfPath, title) {
+    window.open(pdfPath, '_blank');
+}
