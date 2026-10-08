@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelance Design & Brand Identity Showcase | Vivek Kumar</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0B0F19',
+                            surface: '#151C2C',
+                            card: '#1E293B',
+                            purple: '#6366F1',
+                            accent: '#EC4899',
+                            gold: '#FBBF24'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-brand-dark text-slate-100 font-sans antialiased selection:bg-pink-500 selection:text-white relative overflow-x-hidden">
+
+    <!-- Glowing Background Atmosphere Orbs -->
+    <div class="fixed top-0 left-1/4 w-96 h-96 bg-indigo-600/15 rounded-full blur-[120px] pointer-events-none"></div>
+    <div class="fixed top-1/3 right-10 w-[500px] h-[500px] bg-pink-600/10 rounded-full blur-[150px] pointer-events-none"></div>
+
+    <!-- Top Navigation Header -->
+    <nav class="fixed top-0 left-0 w-full bg-brand-dark/80 backdrop-blur-xl z-50 border-b border-indigo-500/20">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-black tracking-wider text-white">VIVEK<span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-pink-400 to-amber-400">.DESIGN</span></a>
+            <a href="index.html" class="text-xs font-bold text-amber-400 hover:text-white transition inline-flex items-center gap-2 bg-brand-surface/80 px-4 py-2 rounded-xl border border-indigo-500/30 shadow-md">
+                <i class="fa-solid fa-arrow-left"></i> Back to Main Portfolio
+            </a>
+        </div>
+    </nav>
+
+    <!-- Header / Overview Section -->
+    <header class="pt-36 pb-16 px-6 max-w-7xl mx-auto text-center relative z-10">
+        <span class="inline-block bg-gradient-to-r from-amber-400 to-orange-400 text-slate-950 font-black uppercase tracking-widest text-[11px] px-3.5 py-1 rounded-full shadow-md mb-3">
+            ⚡ Commissioned Client Work
+        </span>
+        <h1 class="text-4xl md:text-5xl font-black text-white mt-1">Freelance Design Showcase</h1>
+        <p class="text-slate-300 max-w-2xl mx-auto mt-4 text-base leading-relaxed">
+            Specialized client projects featuring custom brand logo marks, executive visiting card layouts, social media ad campaigns, and commercial print banners.
+        </p>
+    </header>
+
+    <!-- Freelance Categories Grid -->
+    <main class="max-w-7xl mx-auto px-6 pb-24 space-y-16 relative z-10">
+
+        <!-- Category 1: Logos & Brand Marks -->
+        <section>
+            <div class="border-b border-indigo-500/20 pb-4 mb-8 flex items-center justify-between">
+                <h2 class="text-2xl font-black text-white flex items-center gap-3">
+                    <i class="fa-solid fa-pen-nib text-amber-400"></i> Logo Design & Brand Marks
+                </h2>
+                <span class="text-xs text-indigo-300 font-extrabold uppercase tracking-wider">Vector Systems</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Project 1: Vivek Security Shield Logo -->
+                <div onclick="openImageModal('assets/images/vss_logo.jpg')" class="bg-brand-surface border border-indigo-500/20 rounded-2xl p-6 hover:border-amber-400 transition duration-300 cursor-pointer group shadow-xl">
+                    <div class="h-48 bg-indigo-950 rounded-xl flex items-center justify-center p-2 mb-4 overflow-hidden border border-indigo-500/20">
+                        <img src="assets/images/vss_logo.jpg" alt="Vivek Security Shield Logo" class="max-h-full object-contain group-hover:scale-105 transition duration-300">
+                    </div>
+                    <span class="text-xs text-amber-400 font-extrabold uppercase">Corporate Identity</span>
+                    <h3 class="font-bold text-lg text-white mt-1 group-hover:text-amber-300 transition">Vivek Security Shield Logo</h3>
+                    <p class="text-slate-300 text-xs mt-2 leading-relaxed">Protective shield & surveillance eye brand mark for corporate security identity[cite: 10, 11].</p>
+                </div>
+
+                <!-- Project 2: Shree Gajanan Gases Logo -->
+                <div onclick="openImageModal('assets/images/freelance_logo_gajanan.jpg')" class="bg-brand-surface border border-indigo-500/20 rounded-2xl p-6 hover:border-pink-400 transition duration-300 cursor-pointer group shadow-xl">
+                    <div class="h-48 bg-white rounded-xl flex items-center justify-center p-4 mb-4 overflow-hidden border border-indigo-500/20">
+                        <img src="assets/images/freelance_logo_gajanan.jpg" alt="Shree Gajanan Gases Logo" class="max-h-full object-contain group-hover:scale-105 transition duration-300">
+                    </div>
+                    <span class="text-xs text-pink-400 font-extrabold uppercase">Industrial Brand Logo</span>
+                    <h3 class="font-bold text-lg text-white mt-1 group-hover:text-pink-300 transition">Shree Gajanan Gases</h3>
+                    <p class="text-slate-300 text-xs mt-2 leading-relaxed">Vector gas droplet and Lord Ganesha element composition[cite: 4, 7, 9].</p>
+                </div>
+
+                <!-- Project 3: Shree Gajanan Cylinder Variant -->
+                <div onclick="openImageModal('assets/images/freelance_logo_gajanan_cylinder.jpg')" class="bg-brand-surface border border-indigo-500/20 rounded-2xl p-6 hover:border-indigo-400 transition duration-300 cursor-pointer group shadow-xl">
+                    <div class="h-48 bg-white rounded-xl flex items-center justify-center p-4 mb-4 overflow-hidden border border-indigo-500/20">
+                        <img src="assets/images/freelance_logo_gajanan_cylinder.jpg" alt="Shree Gajanan Cylinder Logo" class="max-h-full object-contain group-hover:scale-105 transition duration-300">
+                    </div>
+                    <span class="text-xs text-indigo-400 font-extrabold uppercase">Product Logo Variant</span>
+                    <h3 class="font-bold text-lg text-white mt-1 group-hover:text-indigo-300 transition">Gajanan Cylinder Emblem</h3>
+                    <p class="text-slate-300 text-xs mt-2 leading-relaxed">Gas cylinder icon vector layout designed for product labels[cite: 7].</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category 2: Visiting Cards & Print Collaterals -->
+        <section>
+            <div class="border-b border-indigo-500/20 pb-4 mb-8 flex items-center justify-between">
+                <h2 class="text-2xl font-black text-white flex items-center gap-3">
+                    <i class="fa-solid fa-id-card text-pink-400"></i> Executive Visiting Cards & Flyers
+                </h2>
+                <span class="text-xs text-indigo-300 font-extrabold uppercase tracking-wider">Print Media</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Project 4: Vivek Security Visiting Card -->
+                <div onclick="openImageModal('assets/images/vishal_card.jpg')" class="bg-brand-surface border border-indigo-500/20 rounded-2xl p-6 hover:border-pink-400 transition duration-300 cursor-pointer group shadow-xl">
+                    <div class="h-56 bg-indigo-950 rounded-xl flex items-center justify-center p-2 mb-4 overflow-hidden border border-indigo-500/20">
+                        <img src="assets/images/vishal_card.jpg" alt="Vivek Security Visiting Card" class="max-h-full object-contain group-hover:scale-105 transition duration-300">
+                    </div>
+                    <span class="text-xs text-pink-400 font-extrabold uppercase">Executive Corporate Print</span>
+                    <h3 class="font-bold text-lg text-white mt-1 group-hover:text-pink-300 transition">Vivek Security Visiting Card</h3>
+                    <p class="text-slate-300 text-xs mt-2 leading-relaxed">Double-sided business card with geometric gold styling for Managing Director Vijay Singh Rajput[cite: 3].</p>
+                </div>
+
+                <!-- Project 5: V.K. Graphic Designer Flyer -->
+                <div onclick="openImageModal('assets/images/freelance_services_banner.jpg')" class="bg-brand-surface border border-indigo-500/20 rounded-2xl p-6 hover:border-amber-400 transition duration-300 cursor-pointer group shadow-xl">
+                    <div class="h-56 bg-indigo-950 rounded-xl flex items-center justify-center p-2 mb-4 overflow-hidden border border-indigo-500/20">
+                        <img src="assets/images/freelance_services_banner.jpg" alt="V.K. Graphic Designer Service Flyer" class="max-h-full object-contain group-hover:scale-105 transition duration-300">
+                    </div>
+                    <span class="text-xs text-amber-400 font-extrabold uppercase">Self Brand Promo</span>
+                    <h3 class="font-bold text-lg text-white mt-1 group-hover:text-amber-300 transition">V.K. Graphic Designer Flyer</h3>
+                    <p class="text-slate-300 text-xs mt-2 leading-relaxed">Promotional service card outlining 9 design capabilities (Logo, Brochure, Packaging, Web)[cite: 8].</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category 3: Commercial Banners & Ads -->
+        <section>
+            <div class="border-b border-indigo-500/20 pb-4 mb-8 flex items-center justify-between">
+                <h2 class="text-2xl font-black text-white flex items-center gap-3">
+                    <i class="fa-solid fa-rectangle-ad text-cyan-400"></i> Social Media Ads & Commercial Banners
+                </h2>
+                <span class="text-xs text-indigo-300 font-extrabold uppercase tracking-wider">Digital & Print Banners</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Project 6: Shree Gajanan Gases Banner -->
+                <div onclick="openImageModal('assets/images/banner.jpg')" class="bg-brand-surface border border-indigo-500/20 rounded-2xl p-6 hover:border-cyan-400 transition duration-300 cursor-pointer group shadow-xl">
+                    <div class="h-56 bg-indigo-950 rounded-xl flex items-center justify-center p-2 mb-4 overflow-hidden border border-indigo-500/20">
+                        <img src="assets/images/banner.jpg" alt="Shree Gajanan Gases Industrial Flex Banner" class="max-h-full object-contain group-hover:scale-105 transition duration-300">
+                    </div>
+                    <span class="text-xs text-cyan-400 font-extrabold uppercase">Industrial Flex Banner</span>
+                    <h3 class="font-bold text-lg text-white mt-1 group-hover:text-cyan-300 transition">Gajanan Gases Product Banner</h3>
+                    <p class="text-slate-300 text-xs mt-2 leading-relaxed">Commercial print banner displaying full gas cylinder product inventory (Oxygen, Argon, CO2, LPG)[cite: 9].</p>
+                </div>
+
+                <!-- Project 7: Coffee House Post -->
+                <div onclick="openImageModal('assets/images/freelance_coffee_ad.jpg')" class="bg-brand-surface border border-indigo-500/20 rounded-2xl p-6 hover:border-amber-400 transition duration-300 cursor-pointer group shadow-xl">
+                    <div class="h-56 bg-indigo-950 rounded-xl flex items-center justify-center p-2 mb-4 overflow-hidden border border-indigo-500/20">
+                        <img src="assets/images/freelance_coffee_ad.jpg" alt="Coffee House Post" class="max-h-full object-contain group-hover:scale-105 transition duration-300">
+                    </div>
+                    <span class="text-xs text-amber-400 font-extrabold uppercase">Social Media Ad</span>
+                    <h3 class="font-bold text-lg text-white mt-1 group-hover:text-amber-300 transition">Coffee House 50% Off Banner</h3>
+                    <p class="text-slate-300 text-xs mt-2 leading-relaxed">Steam retouching, warm lighting, and coffee bean depth-of-field arrangement[cite: 5].</p>
+                </div>
+
+                <!-- Project 8: Samosa Restaurant Post -->
+                <div onclick="openImageModal('assets/images/freelance_samosa_ad.jpg')" class="bg-brand-surface border border-indigo-500/20 rounded-2xl p-6 hover:border-pink-400 transition duration-300 cursor-pointer group shadow-xl">
+                    <div class="h-56 bg-indigo-950 rounded-xl flex items-center justify-center p-2 mb-4 overflow-hidden border border-indigo-500/20">
+                        <img src="assets/images/freelance_samosa_ad.jpg" alt="Samosa Ad" class="max-h-full object-contain group-hover:scale-105 transition duration-300">
+                    </div>
+                    <span class="text-xs text-pink-400 font-extrabold uppercase">Food Promo</span>
+                    <h3 class="font-bold text-lg text-white mt-1 group-hover:text-pink-300 transition">Samosa Restaurant Post</h3>
+                    <p class="text-slate-300 text-xs mt-2 leading-relaxed">High-contrast orange/black split layout with online ordering badges[cite: 6].</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-indigo-500/20 text-center text-xs text-slate-500 relative z-10">
+        <p>© Vivek Kumar. Freelance Visual Design Portfolio.</p>
+    </footer>
+
+    <!-- Universal Image Modal Preview -->
+    <div id="imageModal" class="fixed inset-0 bg-black/90 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-brand-surface border border-indigo-500/30 rounded-2xl max-w-3xl w-full max-h-[90vh] p-6 relative shadow-2xl flex flex-col items-center justify-center text-center">
+            <button onclick="closeImageModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-2xl transition">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="w-full h-full flex items-center justify-center overflow-hidden my-2">
+                <img id="imageModalSrc" src="" alt="Freelance Work Preview" class="max-w-full max-h-[70vh] object-contain rounded-xl border border-indigo-400 shadow-lg">
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Interaction Script -->
+    <script>
+        function openImageModal(src) {
+            document.getElementById('imageModalSrc').src = src;
+            document.getElementById('imageModal').classList.remove('hidden');
+        }
+        function closeImageModal() {
+            document.getElementById('imageModal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>

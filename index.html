@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivek Kumar | Senior Graphic Designer & Branding Specialist</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0B0F19',
+                            surface: '#151C2C',
+                            card: '#1E293B',
+                            purple: '#6366F1',
+                            accent: '#EC4899',
+                            gold: '#FBBF24'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Custom CSS File -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-brand-dark text-slate-100 font-sans antialiased selection:bg-pink-500 selection:text-white relative overflow-x-hidden">
+
+    <!-- Glowing Background Atmosphere Orbs -->
+    <div class="fixed top-0 left-1/4 w-96 h-96 bg-indigo-600/15 rounded-full blur-[120px] pointer-events-none"></div>
+    <div class="fixed top-1/3 right-10 w-[500px] h-[500px] bg-pink-600/10 rounded-full blur-[150px] pointer-events-none"></div>
+    <div class="fixed bottom-10 left-10 w-80 h-80 bg-purple-600/10 rounded-full blur-[130px] pointer-events-none"></div>
+
+    <!-- Navigation Header -->
+    <nav class="fixed top-0 left-0 w-full bg-brand-dark/80 backdrop-blur-xl z-50 border-b border-indigo-500/20">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-black tracking-wider text-white">VIVEK<span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-pink-400 to-amber-400">.DESIGN</span></a>
+            <div class="hidden md:flex space-x-8 text-sm font-bold text-slate-300">
+                <a href="#about" class="hover:text-amber-400 transition">About</a>
+                <a href="#services" class="hover:text-amber-400 transition">Services</a>
+                <a href="#work" class="hover:text-amber-400 transition">Explore Work</a>
+                <a href="#process" class="hover:text-amber-400 transition">Process</a>
+                <a href="#certifications" class="hover:text-amber-400 transition">Certifications</a>
+                <a href="#freelance" class="hover:text-amber-400 transition">Freelance</a>
+                <a href="#contact" class="hover:text-amber-400 transition">Contact</a>
+            </div>
+            <!-- Path matching VS Code explorer: docs/Resume.pdf -->
+            <a href="docs/Resume.pdf" target="_blank" download class="bg-gradient-to-r from-indigo-500 to-pink-500 hover:from-indigo-600 hover:to-pink-600 text-white text-xs font-black px-5 py-2.5 rounded-xl shadow-lg shadow-indigo-500/25 transition transform hover:-translate-y-0.5 inline-flex items-center gap-2">
+                <i class="fa-solid fa-download"></i>Resume
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="about" class="pt-36 pb-20 px-6 max-w-7xl mx-auto relative z-10">
+        <div class="grid md:grid-cols-12 gap-12 items-center">
+            <div class="md:col-span-7 space-y-6">
+                <div class="inline-flex items-center gap-2 bg-indigo-500/15 border border-indigo-500/30 px-3.5 py-1.5 rounded-full text-xs text-indigo-300 font-extrabold tracking-wide">
+                    <span class="w-2.5 h-2.5 rounded-full bg-pink-500 animate-ping"></span>
+                    <span>Available for Corporate & Freelance Projects</span>
+                </div>
+                <h1 class="text-4xl md:text-6xl font-black text-white leading-tight">
+                    Rajbhar Vivek Kumar
+                </h1>
+                <p class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-pink-400 to-amber-400">
+                    Graphic Designer & Textile Visual Specialist
+                </p>
+                <p class="text-slate-300 text-base leading-relaxed">
+                    Based in Ahmedabad, Gujarat. I turn raw product concepts into high-converting e-commerce visual assets, precision packaging die-lines, and photorealistic 3D textile mockups for brands like <strong class="text-white font-bold">Jindal Texofeb Ltd</strong>.
+                </p>
+                
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="#work" class="bg-gradient-to-r from-indigo-500 to-pink-500 hover:from-indigo-600 hover:to-pink-600 text-white font-black px-7 py-3.5 rounded-xl shadow-lg shadow-indigo-500/20 transition inline-flex items-center gap-2 transform hover:-translate-y-0.5">
+                        <i class="fa-solid fa-compass"></i> Explore My Work
+                    </a>
+                    <a href="#contact" class="bg-slate-800/80 hover:bg-slate-800 border border-indigo-500/30 text-slate-200 font-bold px-7 py-3.5 rounded-xl transition inline-flex items-center gap-2">
+                        <i class="fa-solid fa-paper-plane"></i> Get In Touch
+                    </a>
+                </div>
+
+                <!-- Fast Facts Badges -->
+                <div class="grid grid-cols-3 gap-4 pt-6 border-t border-indigo-500/20">
+                    <div class="bg-brand-surface/60 border border-indigo-500/20 p-4 rounded-xl text-center">
+                        <p class="text-2xl font-black text-amber-400">1+ Year</p>
+                        <p class="text-xs font-bold text-slate-400 uppercase mt-0.5">Industry Exp.</p>
+                    </div>
+                    <div class="bg-brand-surface/60 border border-indigo-500/20 p-4 rounded-xl text-center">
+                        <p class="text-2xl font-black text-pink-400">50+</p>
+                        <p class="text-xs font-bold text-slate-400 uppercase mt-0.5">Deliverables</p>
+                    </div>
+                    <div class="bg-brand-surface/60 border border-indigo-500/20 p-4 rounded-xl text-center">
+                        <p class="text-2xl font-black text-indigo-400">Grade A</p>
+                        <p class="text-xs font-bold text-slate-400 uppercase mt-0.5">Certified Dev</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile Summary Card -->
+            <div class="md:col-span-5 bg-brand-surface/80 border-2 border-indigo-500/30 p-8 rounded-3xl relative shadow-[0_0_50px_rgba(99,102,241,0.15)] backdrop-blur-xl">
+                <div class="space-y-5">
+                    <div class="flex items-center gap-4 border-b border-indigo-500/20 pb-4">
+                        <div class="relative group">
+                            <div class="absolute -inset-0.5 bg-gradient-to-r from-indigo-500 to-pink-500 rounded-full blur opacity-75 group-hover:opacity-100 transition"></div>
+                            <img src="assets/images/profile-pic.jpg" alt="Profile Picture" class="profile-pic w-16 h-16 rounded-full object-cover border-2 border-white relative cursor-pointer">
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-black text-white">Vivek Kumar</h3>
+                            <p class="text-xs font-bold text-indigo-300 uppercase tracking-wider">Core Tool Suite & Skills</p>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-3.5">
+                        <div>
+                            <div class="flex justify-between text-xs font-bold mb-1">
+                                <span class="text-slate-200">Adobe Photoshop (Mockups & Retouching)</span>
+                                <span class="text-pink-400">95%</span>
+                            </div>
+                            <div class="w-full bg-slate-900 h-2 rounded-full overflow-hidden border border-slate-800">
+                                <div class="bg-gradient-to-r from-indigo-500 to-pink-500 h-2 rounded-full w-[95%]"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs font-bold mb-1">
+                                <span class="text-slate-200">Adobe Illustrator (Vector & Packaging)</span>
+                                <span class="text-indigo-400">90%</span>
+                            </div>
+                            <div class="w-full bg-slate-900 h-2 rounded-full overflow-hidden border border-slate-800">
+                                <div class="bg-gradient-to-r from-indigo-500 to-purple-400 h-2 rounded-full w-[90%]"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs font-bold mb-1">
+                                <span class="text-slate-200">CorelDraw (Print Media)</span>
+                                <span class="text-amber-400">85%</span>
+                            </div>
+                            <div class="w-full bg-slate-900 h-2 rounded-full overflow-hidden border border-slate-800">
+                                <div class="bg-gradient-to-r from-amber-400 to-orange-400 h-2 rounded-full w-[85%]"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs font-bold mb-1">
+                                <span class="text-slate-200">Adobe InDesign (Catalogues & Layouts)</span>
+                                <span class="text-cyan-400">80%</span>
+                            </div>
+                            <div class="w-full bg-slate-900 h-2 rounded-full overflow-hidden border border-slate-800">
+                                <div class="bg-gradient-to-r from-cyan-400 to-blue-500 h-2 rounded-full w-[80%]"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 border-t border-indigo-500/20">
+                        <p class="text-xs font-bold text-slate-400 uppercase mb-2">Languages Known:</p>
+                        <div class="flex gap-2">
+                            <span class="bg-indigo-950 border border-indigo-500/30 text-xs px-3 py-1 rounded-lg text-indigo-200 font-bold">English</span>
+                            <span class="bg-indigo-950 border border-indigo-500/30 text-xs px-3 py-1 rounded-lg text-indigo-200 font-bold">Hindi</span>
+                            <span class="bg-indigo-950 border border-indigo-500/30 text-xs px-3 py-1 rounded-lg text-indigo-200 font-bold">Gujarati</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-brand-surface/40 border-t border-indigo-500/20 px-6 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-pink-400 font-extrabold uppercase tracking-widest text-xs">What I Offer</span>
+                <h2 class="text-3xl md:text-4xl font-black text-white mt-2">Design Competencies</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="bg-brand-surface border border-indigo-500/20 p-6 rounded-2xl hover:border-indigo-400 transition duration-300 shadow-xl group">
+                    <div class="w-12 h-12 bg-indigo-500/20 text-indigo-400 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition">
+                        <i class="fa-brands fa-amazon"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-white mb-2">Amazon A+ Content</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">High-converting listing banners, infographic posts, and main imagery tailored for e-commerce platforms.</p>
+                </div>
+
+                <div class="bg-brand-surface border border-indigo-500/20 p-6 rounded-2xl hover:border-pink-400 transition duration-300 shadow-xl group">
+                    <div class="w-12 h-12 bg-pink-500/20 text-pink-400 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-box"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-white mb-2">Box & Print Packaging</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Precision packaging design, die-lines, pamphlets, visiting cards, and brochures engineered for print.</p>
+                </div>
+
+                <div class="bg-brand-surface border border-indigo-500/20 p-6 rounded-2xl hover:border-amber-400 transition duration-300 shadow-xl group">
+                    <div class="w-12 h-12 bg-amber-500/20 text-amber-400 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-couch"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-white mb-2">3D Textile Mockups</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Texture mapping for hotel bedding, comforters, cushions, and towels onto realistic bedroom scenes.</p>
+                </div>
+
+                <div class="bg-brand-surface border border-indigo-500/20 p-6 rounded-2xl hover:border-cyan-400 transition duration-300 shadow-xl group">
+                    <div class="w-12 h-12 bg-cyan-500/20 text-cyan-400 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-white mb-2">Photo Retouching</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Advanced skin editing, color replacement, double exposure, and digital creative composition.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Explore My Work Section (Interactive Dynamic Tabs) -->
+    <section id="work" class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+            <span class="text-amber-400 font-extrabold uppercase tracking-widest text-xs">Featured Projects</span>
+            <h2 class="text-3xl md:text-4xl font-black text-white mt-2">Explore My Work</h2>
+            
+            <!-- Callout Badge -->
+            <div class="mt-4 inline-flex items-center gap-2 bg-indigo-500/15 border border-indigo-500/30 px-5 py-2 rounded-full text-xs text-indigo-200 font-extrabold animate-bounce shadow-md">
+                <i class="fa-solid fa-file-pdf text-red-400 text-sm"></i>
+                <span>Click any card below to view the complete PDF design showcase!</span>
+            </div>
+            <p class="text-slate-400 mt-4 text-xs font-bold uppercase tracking-wider">Filter projects by primary software tool</p>
+            
+            <!-- Software Tab Buttons -->
+            <div class="flex justify-center gap-4 mt-6">
+                <button id="tab-illustrator" onclick="switchTab('illustrator')" class="px-7 py-3 rounded-xl font-black text-xs uppercase tracking-wider border transition border-indigo-500 bg-gradient-to-r from-indigo-500 to-purple-600 text-white shadow-lg shadow-indigo-500/25">
+                    <i class="fa-solid fa-vector-square mr-2"></i>Adobe Illustrator
+                </button>
+                <button id="tab-photoshop" onclick="switchTab('photoshop')" class="px-7 py-3 rounded-xl font-black text-xs uppercase tracking-wider border border-slate-700 bg-slate-800/80 text-slate-300 hover:border-pink-500 transition">
+                    <i class="fa-solid fa-image mr-2"></i>Adobe Photoshop
+                </button>
+            </div>
+        </div>
+
+        <!-- 1. ADOBE ILLUSTRATOR GRID -->
+        <div id="gallery-illustrator" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Card 1: Catalogue PDF -->
+            <div onclick="openPdfModal('assets/pdfs/Adobe Illustrator (2).pdf', 'Jindal Home Product Catalogue')" class="cursor-pointer bg-brand-surface border border-indigo-500/20 rounded-2xl overflow-hidden hover:border-amber-400 transition-all duration-300 group relative shadow-xl hover:shadow-[0_10px_30px_rgba(251,191,36,0.15)]">
+                <div class="h-52 bg-indigo-950/60 flex items-center justify-center p-4 relative overflow-hidden border-b border-indigo-500/20">
+                    <img src="assets/images/doodle_catalogue.png" alt="Cartoon Catalogue Designer" class="h-44 object-contain group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-indigo-950 via-indigo-900/80 to-transparent flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <i class="fa-solid fa-arrow-up-right-from-square text-2xl mb-2 text-amber-400 animate-pulse"></i>
+                        <span class="text-xs font-black uppercase tracking-wider">Click to View PDF</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <span class="text-xs text-amber-400 font-extrabold uppercase">Print & Publication</span>
+                    <h3 class="font-bold text-lg text-white mt-1 group-hover:text-amber-300 transition">Jindal Home Product Catalogue</h3>
+                    <p class="text-slate-400 text-sm mt-2">Hotel linen specification sheets and promotional flyers.</p>
+                </div>
+            </div>
+
+            <!-- Card 2: Packaging Box PDF -->
+            <div onclick="openPdfModal('assets/pdfs/MOCKUPS.pdf', 'Box Packaging & Die-Lines')" class="cursor-pointer bg-brand-surface border border-indigo-500/20 rounded-2xl overflow-hidden hover:border-pink-400 transition-all duration-300 group relative shadow-xl hover:shadow-[0_10px_30px_rgba(236,72,153,0.15)]">
+                <div class="h-52 bg-indigo-950/60 flex items-center justify-center p-4 relative overflow-hidden border-b border-indigo-500/20">
+                    <img src="assets/images/doodle_packaging.png" alt="Cartoon Packaging Designer" class="h-44 object-contain group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-indigo-950 via-indigo-900/80 to-transparent flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <i class="fa-solid fa-arrow-up-right-from-square text-2xl mb-2 text-pink-400 animate-pulse"></i>
+                        <span class="text-xs font-black uppercase tracking-wider">Click to View PDF</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <span class="text-xs text-pink-400 font-extrabold uppercase">Brand Packaging</span>
+                    <h3 class="font-bold text-lg text-white mt-1 group-hover:text-pink-300 transition">Box Packaging & Die-Lines</h3>
+                    <p class="text-slate-400 text-sm mt-2">Custom box structures, brochures, and visiting cards.</p>
+                </div>
+            </div>
+
+            <!-- Card 3: Vector Art Bedding PDF -->
+            <div onclick="openPdfModal('assets/pdfs/Adobe Illustrator.pdf', 'Kids Bedding Vector Art')" class="cursor-pointer bg-brand-surface border border-indigo-500/20 rounded-2xl overflow-hidden hover:border-indigo-400 transition-all duration-300 group relative shadow-xl hover:shadow-[0_10px_30px_rgba(99,102,241,0.15)]">
+                <div class="h-52 bg-indigo-950/60 flex items-center justify-center p-4 relative overflow-hidden border-b border-indigo-500/20">
+                    <img src="assets/images/doodle_vector.png" alt="Cartoon Vector Artist" class="h-44 object-contain group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-indigo-950 via-indigo-900/80 to-transparent flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <i class="fa-solid fa-arrow-up-right-from-square text-2xl mb-2 text-indigo-400 animate-pulse"></i>
+                        <span class="text-xs font-black uppercase tracking-wider">Click to View PDF</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <span class="text-xs text-indigo-400 font-extrabold uppercase">Vector Illustration</span>
+                    <h3 class="font-bold text-lg text-white mt-1 group-hover:text-indigo-300 transition">Kids Bedding Vector Art</h3>
+                    <p class="text-slate-400 text-sm mt-2">Theme-based banners ("Because Every Dream Deserves Comfort").</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. ADOBE PHOTOSHOP GRID (Initially Hidden) -->
+        <div id="gallery-photoshop" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 hidden">
+            <!-- Card 4: Photoshop Design Showcase PDF -->
+            <div onclick="openPdfModal('assets/pdfs/Adobe Photoshop.pdf', 'Photoshop Design Showcase')" class="cursor-pointer bg-brand-surface border border-indigo-500/20 rounded-2xl overflow-hidden hover:border-cyan-400 transition-all duration-300 group relative shadow-xl hover:shadow-[0_10px_30px_rgba(34,211,238,0.15)]">
+                <div class="h-52 bg-indigo-950/60 flex items-center justify-center p-4 relative overflow-hidden border-b border-indigo-500/20">
+                    <img src="assets/images/doodle_photoshop.png" alt="Cartoon Photoshop Retoucher" class="h-44 object-contain group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-indigo-950 via-indigo-900/80 to-transparent flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <i class="fa-solid fa-arrow-up-right-from-square text-2xl mb-2 text-cyan-400 animate-pulse"></i>
+                        <span class="text-xs font-black uppercase tracking-wider">Click to View PDF</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <span class="text-xs text-cyan-400 font-extrabold uppercase">Photo Editing & Manipulation</span>
+                    <h3 class="font-bold text-lg text-white mt-1 group-hover:text-cyan-300 transition">Photoshop Design Showcase</h3>
+                    <p class="text-slate-400 text-sm mt-2">Movie posters, skin retouching, double exposure, and digital artwork.</p>
+                </div>
+            </div>
+
+            <!-- Card 5: 3D Bedroom Texture Mockups PDF -->
+            <div onclick="openPdfModal('assets/pdfs/MOCKUPS.pdf', '3D Bedroom Texture Mockups')" class="cursor-pointer bg-brand-surface border border-indigo-500/20 rounded-2xl overflow-hidden hover:border-pink-400 transition-all duration-300 group relative shadow-xl hover:shadow-[0_10px_30px_rgba(236,72,153,0.15)]">
+                <div class="h-52 bg-indigo-950/60 flex items-center justify-center p-4 relative overflow-hidden border-b border-indigo-500/20">
+                    <img src="assets/images/doodle_mockup.png" alt="Cartoon Bedroom Texture Mockup Designer" class="h-44 object-contain group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-indigo-950 via-indigo-900/80 to-transparent flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <i class="fa-solid fa-arrow-up-right-from-square text-2xl mb-2 text-pink-400 animate-pulse"></i>
+                        <span class="text-xs font-black uppercase tracking-wider">Click to View PDF</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <span class="text-xs text-pink-400 font-extrabold uppercase">Product Mockups</span>
+                    <h3 class="font-bold text-lg text-white mt-1 group-hover:text-pink-300 transition">3D Bedroom Texture Mockups</h3>
+                    <p class="text-slate-400 text-sm mt-2">Photorealistic pattern application for bedsheets, blankets, and cushions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Creative Process Section -->
+    <section id="process" class="py-20 bg-brand-surface/40 border-t border-indigo-500/20 px-6 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-indigo-400 font-extrabold uppercase tracking-widest text-xs">Methodology</span>
+                <h2 class="text-3xl md:text-4xl font-black text-white mt-2">My Creative Process</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-6 relative">
+                <div class="bg-brand-surface p-6 rounded-2xl border border-indigo-500/20 relative shadow-xl">
+                    <span class="text-3xl font-black text-indigo-500/20 absolute top-4 right-4">01</span>
+                    <h3 class="font-bold text-white mb-2">Requirement Brief</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Understanding product specifications, target dimensions, colors, and printing material constraints.</p>
+                </div>
+                <div class="bg-brand-surface p-6 rounded-2xl border border-indigo-500/20 relative shadow-xl">
+                    <span class="text-3xl font-black text-pink-500/20 absolute top-4 right-4">02</span>
+                    <h3 class="font-bold text-white mb-2">Wireframing</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Creating vector die-lines in Illustrator or layout wireframes for banners and catalogues.</p>
+                </div>
+                <div class="bg-brand-surface p-6 rounded-2xl border border-indigo-500/20 relative shadow-xl">
+                    <span class="text-3xl font-black text-amber-500/20 absolute top-4 right-4">03</span>
+                    <h3 class="font-bold text-white mb-2">High-Fidelity Design</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Applying textures, lighting adjustments, color swatches, and typography in Photoshop/Illustrator.</p>
+                </div>
+                <div class="bg-brand-surface p-6 rounded-2xl border border-indigo-500/20 relative shadow-xl">
+                    <span class="text-3xl font-black text-cyan-500/20 absolute top-4 right-4">04</span>
+                    <h3 class="font-bold text-white mb-2">Export & Prepress</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Delivering CMYK print-ready files or optimized RGB web assets for Amazon e-commerce.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Education Timeline Section -->
+    <section class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12">
+            <!-- Job Experience -->
+            <div>
+                <h2 class="text-2xl font-black text-white mb-8 inline-flex items-center">
+                    <i class="fa-solid fa-briefcase text-amber-400 mr-3"></i>Work Experience
+                </h2>
+                <div class="border-l-2 border-indigo-500/30 pl-6 space-y-8">
+                    <div class="relative">
+                        <div class="w-3.5 h-3.5 bg-amber-400 rounded-full absolute -left-[31.5px] top-1.5 shadow-[0_0_10px_rgba(251,191,36,0.5)]"></div>
+                        <span class="text-xs text-amber-400 font-extrabold uppercase tracking-wider">June 2025 – Present</span>
+                        <h3 class="text-lg font-bold text-white mt-1">Graphic Designer</h3>
+                        <p class="text-sm font-semibold text-indigo-300">Jindal Texofeb Ltd</p>
+                        <ul class="text-xs text-slate-300 mt-2 space-y-1.5 list-disc list-inside leading-relaxed">
+                            <li>Design digital artwork, Amazon post graphics, and banners in Photoshop.</li>
+                            <li>Craft box packaging die-lines, brochures, pamphlets, and business cards in Illustrator.</li>
+                            <li>Develop high-fidelity product mockups for home textile collections.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div>
+                <h2 class="text-2xl font-black text-white mb-8 inline-flex items-center">
+                    <i class="fa-solid fa-graduation-cap text-pink-400 mr-3"></i>Education & Training
+                </h2>
+                <div class="border-l-2 border-indigo-500/30 pl-6 space-y-8">
+                    <div class="relative">
+                        <div class="w-3.5 h-3.5 bg-pink-400 rounded-full absolute -left-[31.5px] top-1.5 shadow-[0_0_10px_rgba(236,72,153,0.5)]"></div>
+                        <span class="text-xs text-pink-400 font-extrabold uppercase tracking-wider">Completed Aug 2025</span>
+                        <h3 class="text-lg font-bold text-white mt-1">Professional Certification in Graphic Design</h3>
+                        <p class="text-sm font-semibold text-indigo-300">TOPS Technologies, Ahmedabad</p>
+                    </div>
+                    <div class="relative">
+                        <div class="w-3.5 h-3.5 bg-indigo-500 rounded-full absolute -left-[31.5px] top-1.5"></div>
+                        <span class="text-xs text-indigo-400 font-extrabold uppercase tracking-wider">2021</span>
+                        <h3 class="text-lg font-bold text-white mt-1">Bachelor of Science (B.Sc.)</h3>
+                        <p class="text-sm font-semibold text-indigo-300">Bhavan's Sheth R.A. College of Science, Ahmedabad</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-20 bg-brand-surface/40 border-t border-indigo-500/20 px-6 backdrop-blur-md">
+        <div class="max-w-4xl mx-auto text-center">
+            <span class="text-amber-400 font-extrabold uppercase tracking-widest text-xs">Credentials</span>
+            <h2 class="text-3xl font-black text-white mt-2">Verified Certifications</h2>
+            <div class="grid md:grid-cols-2 gap-6 mt-10">
+                <!-- Cert 1 -->
+                <div class="bg-brand-surface border border-indigo-500/30 p-6 rounded-2xl text-left shadow-xl hover:border-indigo-400 transition">
+                    <span class="text-xs text-indigo-300 font-extrabold uppercase">23 Aug 2025</span>
+                    <h3 class="text-xl font-bold text-white mt-1">Certified Graphic Designer</h3>
+                    <p class="text-slate-400 text-sm mt-1">TOPS Technologies Private Limited</p>
+                    <button onclick="window.open('assets/pdfs/vivek_certificate_1.pdf', '_blank')" class="mt-4 text-amber-400 text-sm font-bold hover:underline inline-flex items-center gap-2">
+                        <i class="fa-solid fa-file-pdf text-red-500"></i> View Official Certificate
+                    </button>
+                </div>
+                <!-- Cert 2 -->
+                <div class="bg-brand-surface border border-indigo-500/30 p-6 rounded-2xl text-left shadow-xl hover:border-indigo-400 transition">
+                    <span class="text-xs text-indigo-300 font-extrabold uppercase">25 July 2025</span>
+                    <h3 class="text-xl font-bold text-white mt-1">Media Developer Course (Grade A)</h3>
+                    <p class="text-slate-400 text-sm mt-1">Skill India / NSDC / TOPS Technologies</p>
+                    <button onclick="window.open('assets/pdfs/vivek_certificate_2.pdf', '_blank')" class="mt-4 text-amber-400 text-sm font-bold hover:underline inline-flex items-center gap-2">
+                        <i class="fa-solid fa-file-pdf text-red-500"></i> View Official Certificate
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Freelance & Creative Services Section (Vibrant Theme) -->
+    <section id="freelance" class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="bg-indigo-950/80 border-2 border-indigo-500/40 rounded-3xl p-8 md:p-12 shadow-[0_0_50px_rgba(99,102,241,0.2)] relative overflow-hidden backdrop-blur-xl">
+            
+            <div class="max-w-3xl space-y-4 relative z-10">
+                <span class="inline-block bg-gradient-to-r from-amber-400 to-orange-400 text-slate-950 font-black uppercase tracking-widest text-[11px] px-3.5 py-1 rounded-full shadow-md">
+                    ⚡ Custom Brand Solutions
+                </span>
+                <h2 class="text-3xl md:text-5xl font-black text-white tracking-tight">
+                    Freelance Design & <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-300 to-pink-400">Brand Identity</span>
+                </h2>
+                <p class="text-slate-300 text-base leading-relaxed">
+                    Looking for high-impact visual identity, custom logo marks, or specialized packaging artwork for your startup or enterprise? I offer freelance design services tailored to build unique, memorable brand assets.
+                </p>
+                <div class="flex flex-wrap gap-2.5 pt-2 text-xs font-bold text-white">
+                    <span class="bg-indigo-900/80 border border-indigo-400/30 px-3.5 py-1.5 rounded-xl text-indigo-200 shadow-sm flex items-center gap-2">
+                        <i class="fa-solid fa-check text-amber-400"></i> Custom Logo Marks
+                    </span>
+                    <span class="bg-indigo-900/80 border border-indigo-400/30 px-3.5 py-1.5 rounded-xl text-indigo-200 shadow-sm flex items-center gap-2">
+                        <i class="fa-solid fa-check text-pink-400"></i> Business & Visiting Cards
+                    </span>
+                    <span class="bg-indigo-900/80 border border-indigo-400/30 px-3.5 py-1.5 rounded-xl text-indigo-200 shadow-sm flex items-center gap-2">
+                        <i class="fa-solid fa-check text-emerald-400"></i> Restaurant Menu Design
+                    </span>
+                    <span class="bg-indigo-900/80 border border-indigo-400/30 px-3.5 py-1.5 rounded-xl text-indigo-200 shadow-sm flex items-center gap-2">
+                        <i class="fa-solid fa-check text-cyan-400"></i> Commercial Banners & Ads
+                    </span>
+                </div>
+            </div>
+
+            <!-- Featured Freelance Project Highlight: Puff Wheeler Menu Card -->
+            <div class="mt-10 pt-8 border-t border-indigo-800/60 relative z-10">
+                <div onclick="window.open('assets/pdfs/menu_final.pdf', '_blank')" class="bg-slate-900/90 border-2 border-indigo-500/30 hover:border-amber-400 rounded-2xl p-6 transition-all duration-300 cursor-pointer group flex flex-col md:flex-row gap-6 items-center shadow-xl hover:shadow-[0_10px_30px_rgba(251,191,36,0.15)]">
+                    
+                    <div class="w-full md:w-2/5 h-52 bg-indigo-950 rounded-xl overflow-hidden border border-indigo-500/20 flex items-center justify-center relative p-2">
+                        <img src="assets/images/menu_card.jpg" onerror="this.src='assets/images/freelance_samosa_ad.jpg'" alt="Puff Wheeler Tri-Fold Food Menu Design" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-indigo-950/90 via-indigo-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center rounded-xl">
+                            <span class="bg-amber-400 text-slate-950 text-xs font-black px-4 py-2 rounded-xl shadow-lg inline-flex items-center gap-2 transform translate-y-2 group-hover:translate-y-0 transition">
+                                <i class="fa-solid fa-file-pdf text-red-600"></i> Open High-Res Vector PDF
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="w-full md:w-3/5 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-2">
+                                <span class="bg-amber-400/20 text-amber-300 border border-amber-400/40 text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-wider">
+                                    ⭐ Recent Freelance Project
+                                </span>
+                                <span class="text-xs text-indigo-300 font-bold">Restaurant Branding</span>
+                            </div>
+                            <span class="text-[10px] bg-red-500/20 text-red-400 border border-red-500/40 px-2.5 py-0.5 rounded font-black">PDF</span>
+                        </div>
+
+                        <h3 class="text-2xl font-black text-white group-hover:text-amber-300 transition">
+                            Puff Wheeler — Tri-Fold Food Menu Design
+                        </h3>
+
+                        <p class="text-slate-300 text-xs leading-relaxed">
+                            A complete 3-panel commercial restaurant menu layout designed for "Puff Wheeler". Features custom typography hierarchy, item pricing grids, food imagery composition, and special combos. Click to open and zoom into the full high-resolution vector PDF!
+                        </p>
+
+                        <div class="pt-2 flex flex-wrap items-center gap-4 text-xs font-bold text-slate-300">
+                            <span class="inline-flex items-center gap-1.5 text-indigo-200">
+                                <i class="fa-solid fa-utensils text-amber-400"></i> Fast Food & Cafe
+                            </span>
+                            <span class="inline-flex items-center gap-1.5 text-indigo-200">
+                                <i class="fa-solid fa-magnifying-glass-plus text-cyan-400"></i> Vector Zoom PDF
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Button Opening Dedicated Freelance Showcase Page -->
+            <div class="mt-8 pt-6 border-t border-indigo-800/60 flex flex-wrap items-center justify-between gap-4 relative z-10">
+                <span class="text-xs text-indigo-200 font-medium">Explore past client commissions, logo systems & visual design categories.</span>
+                <a href="freelance.html" class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:from-indigo-600 hover:to-pink-600 text-white font-black px-7 py-3.5 rounded-xl shadow-lg shadow-indigo-500/25 transition-all duration-300 inline-flex items-center gap-2 group transform hover:-translate-y-0.5">
+                    <span>View Freelance Showcase</span>
+                    <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer & Contact -->
+    <footer id="contact" class="py-16 px-6 max-w-7xl mx-auto text-center border-t border-indigo-500/20">
+        <h2 class="text-3xl font-black text-white">Let's Work Together</h2>
+        <p class="text-slate-300 max-w-md mx-auto mt-2 text-sm">Have a branding project, packaging die-line, or e-commerce visual requirement? Send a direct message.</p>
+        
+        <div class="mt-8 flex flex-wrap justify-center gap-6 text-sm font-bold">
+            <a href="mailto:vivekbhardwaj391@gmail.com" class="bg-brand-surface border border-indigo-500/30 px-5 py-3 rounded-xl text-amber-400 hover:border-amber-400 transition inline-flex items-center">
+                <i class="fa-solid fa-envelope mr-2"></i>vivekbhardwaj391@gmail.com
+            </a>
+            <a href="tel:+918433353456" class="bg-brand-surface border border-indigo-500/30 px-5 py-3 rounded-xl text-amber-400 hover:border-amber-400 transition inline-flex items-center">
+                <i class="fa-solid fa-phone mr-2"></i>+91 8433353456
+            </a>
+            <span class="bg-brand-surface border border-indigo-500/30 px-5 py-3 rounded-xl text-indigo-200 inline-flex items-center">
+                <i class="fa-solid fa-location-dot mr-2 text-pink-400"></i>Vatva, Ahmedabad - 382445
+            </span>
+        </div>
+        <p class="text-slate-500 text-xs mt-12">© Vivek Kumar. Built with Vanilla HTML5 & Tailwind CSS.</p>
+    </footer>
+
+    <!-- Universal PDF Document Modal -->
+    <div id="pdfModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-2 sm:p-4">
+        <div class="bg-brand-surface border border-indigo-500/30 rounded-2xl max-w-5xl w-full h-[90vh] flex flex-col p-4 relative shadow-2xl overflow-hidden">
+            <div class="flex justify-between items-center mb-3 px-2">
+                <h3 id="pdfTitle" class="text-base sm:text-lg font-bold text-white truncate pr-4">Document Preview</h3>
+                <button onclick="closePdfModal()" class="text-slate-400 hover:text-white text-2xl transition">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <iframe id="pdfFrame" src="" class="w-full flex-1 rounded-lg border border-slate-800 bg-white"></iframe>
+        </div>
+    </div>
+
+    <!-- Image Preview Modal -->
+    <div id="imageModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-brand-surface border border-indigo-500/30 rounded-2xl max-w-md w-full max-h-[90vh] p-6 relative shadow-2xl flex flex-col items-center justify-center text-center">
+            <button onclick="closeImageModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-2xl transition">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="w-full h-full flex items-center justify-center overflow-hidden my-2">
+                <img id="imageModalSrc" src="" alt="Profile Preview" class="max-w-full max-h-[60vh] object-contain rounded-2xl border-2 border-indigo-400 shadow-lg">
+            </div>
+            <h3 class="text-lg font-bold text-white mt-2">Vivek Kumar</h3>
+            <p class="text-xs text-indigo-300 font-bold">Senior Graphic Designer</p>
+        </div>
+    </div>
+
+    <!-- External JavaScript File -->
+    <script src="js/main.js"></script>
+</body>
+</html>

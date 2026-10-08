@@ -1,0 +1,39 @@
+/* Custom Global Adjustments */
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar for dark theme */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0F172A;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1E293B;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0284C7;
+}
+
+/* Profile Picture hover effect */
+.profile-pic {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* Glassmorphism subtle effect for modals */
+#pdfModal > div, #imageModal > div {
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+}
