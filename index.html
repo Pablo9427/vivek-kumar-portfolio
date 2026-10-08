@@ -30,6 +30,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="bg-brand-dark text-slate-100 font-sans antialiased selection:bg-pink-500 selection:text-white relative overflow-x-hidden">
+<!-- Ambient Animated Background -->
+<div class="fixed inset-0 pointer-events-none z-[-1] overflow-hidden">
+    <div class="ambient-orb orb-1"></div>
+    <div class="ambient-orb orb-2"></div>
+    <div class="ambient-orb orb-3"></div>
+    <div class="bg-grid-overlay"></div>
+</div>
 
     <!-- Glowing Background Atmosphere Orbs -->
     <div class="fixed top-0 left-1/4 w-96 h-96 bg-indigo-600/15 rounded-full blur-[120px] pointer-events-none"></div>
@@ -49,10 +56,18 @@
                 <a href="#freelance" class="hover:text-amber-400 transition">Freelance</a>
                 <a href="#contact" class="hover:text-amber-400 transition">Contact</a>
             </div>
-            <!-- Path matching VS Code explorer: docs/Resume.pdf -->
-            <a href="docs/Resume.pdf" target="_blank" download class="bg-gradient-to-r from-indigo-500 to-pink-500 hover:from-indigo-600 hover:to-pink-600 text-white text-xs font-black px-5 py-2.5 rounded-xl shadow-lg shadow-indigo-500/25 transition transform hover:-translate-y-0.5 inline-flex items-center gap-2">
-                <i class="fa-solid fa-download"></i>Resume
-            </a>
+            <div class="flex items-center gap-4">
+                <!-- Theme Toggle Button -->
+                <button id="themeToggleBtn" onclick="toggleTheme()" class="px-3 py-2 rounded-xl border border-indigo-500/30 bg-slate-800/80 text-amber-400 hover:text-amber-300 hover:border-amber-400 transition-all duration-300 flex items-center gap-2 text-xs font-extrabold shadow-md">
+                    <i id="themeIcon" class="fa-solid fa-moon text-sm"></i>
+                    <span id="themeText" class="hidden sm:inline">Dark Mode</span>
+                </button>
+
+                <!-- Resume Download Button -->
+                <a href="docs/Resume.pdf" target="_blank" download class="bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold px-4 py-2 rounded-xl transition flex items-center gap-2 shadow-lg shadow-indigo-500/20">
+                    <i class="fa-solid fa-download"></i>Resume
+                </a>
+            </div>
         </div>
     </nav>
 

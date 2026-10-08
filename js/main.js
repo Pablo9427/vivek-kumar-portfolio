@@ -84,3 +84,36 @@ document.addEventListener('DOMContentLoaded', function () {
 function openPdfModal(pdfPath, title) {
     window.open(pdfPath, '_blank');
 }
+// Theme Toggle & LocalStorage Logic
+function initTheme() {
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    updateThemeUI(savedTheme);
+}
+
+function toggleTheme() {
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    updateThemeUI(newTheme);
+}
+
+function updateThemeUI(theme) {
+    const icon = document.getElementById('themeIcon');
+    const text = document.getElementById('themeText');
+    
+    if (icon && text) {
+        if (theme === 'light') {
+            icon.className = 'fa-solid fa-sun text-amber-500';
+            text.textContent = 'Light Mode';
+        } else {
+            icon.className = 'fa-solid fa-moon text-indigo-400';
+            text.textContent = 'Dark Mode';
+        }
+    }
+}
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', initTheme);
