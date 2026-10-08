@@ -532,16 +532,27 @@
         <p class="text-slate-500 text-xs mt-12">© Vivek Kumar. Built with Vanilla HTML5 & Tailwind CSS.</p>
     </footer>
 
-    <!-- Universal PDF Document Modal -->
-    <div id="pdfModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-2 sm:p-4">
-        <div class="bg-brand-surface border border-indigo-500/30 rounded-2xl max-w-5xl w-full h-[90vh] flex flex-col p-4 relative shadow-2xl overflow-hidden">
-            <div class="flex justify-between items-center mb-3 px-2">
-                <h3 id="pdfTitle" class="text-base sm:text-lg font-bold text-white truncate pr-4">Document Preview</h3>
-                <button onclick="closePdfModal()" class="text-slate-400 hover:text-white text-2xl transition">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
+    <!-- Universal PDF Document Modal (Mobile-Scroll & Responsive-Fit Fixed) -->
+    <div id="pdfModal" class="fixed inset-0 bg-black/85 backdrop-blur-md z-50 hidden flex items-center justify-center p-3 sm:p-6">
+        <div class="bg-brand-surface border border-indigo-500/30 rounded-2xl w-full max-w-5xl h-[88vh] flex flex-col p-4 relative shadow-2xl overflow-hidden">
+            
+            <!-- Modal Header -->
+            <div class="flex justify-between items-center mb-3 pb-2 border-b border-indigo-500/20">
+                <h3 id="pdfTitle" class="text-sm sm:text-lg font-black text-white truncate pr-4">Document Preview</h3>
+                <div class="flex items-center gap-3">
+                    <button onclick="window.open(document.getElementById('pdfFrame').src, '_blank')" class="text-xs bg-indigo-500/20 hover:bg-indigo-500 text-indigo-300 hover:text-white px-3 py-1.5 rounded-lg border border-indigo-500/30 transition flex items-center gap-1.5 font-bold">
+                        <i class="fa-solid fa-expand"></i> Full Screen
+                    </button>
+                    <button onclick="closePdfModal()" class="text-slate-400 hover:text-white text-2xl transition">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
             </div>
-            <iframe id="pdfFrame" src="" class="w-full flex-1 rounded-lg border border-slate-800 bg-white"></iframe>
+
+            <!-- PDF Viewer Frame with Touch Scroll Fix -->
+            <div class="w-full flex-1 overflow-y-auto rounded-xl bg-slate-950 border border-indigo-500/20 -webkit-overflow-scrolling-touch">
+                <iframe id="pdfFrame" src="" class="w-full h-full min-h-full border-0"></iframe>
+            </div>
         </div>
     </div>
 

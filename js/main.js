@@ -24,18 +24,30 @@ function switchTab(tab) {
  * Universal PDF Modal Controls (removes editing toolbar & shrinks to fit screen)
  */
 function openPdfModal(pdfPath, title) {
-    document.getElementById('pdfTitle').innerText = title;
-    
-    // Add parameters to disable browser editing toolbar and force shrink-to-fit view
-    const cleanPdfUrl = pdfPath + "#toolbar=0&navpanes=0&view=FitH";
-    document.getElementById('pdfFrame').src = cleanPdfUrl;
-    
-    document.getElementById('pdfModal').classList.remove('hidden');
+    // Check if user is on a mobile device
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent) || window.innerWidth < 768;
+
+    if (isMobile) {
+        // Direct open triggers mobile browser's native, high-speed, pinch-to-zoom PDF viewer
+        window.open(pdfPath, '_blank');
+    } else {
+        // Desktop iframe modal view
+        const modal = document.getElementById('pdfModal');
+        const frame = document.getElementById('pdfFrame');
+        const titleElem = document.getElementById('pdfTitle');
+
+        if (titleElem) titleElem.textContent = title || 'Document Preview';
+        if (frame) frame.src = pdfPath;
+        if (modal) modal.classList.remove('hidden');
+    }
 }
 
 function closePdfModal() {
-    document.getElementById('pdfModal').classList.add('hidden');
-    document.getElementById('pdfFrame').src = '';
+    const modal = document.getElementById('pdfModal');
+    const frame = document.getElementById('pdfFrame');
+    
+    if (modal) modal.classList.add('hidden');
+    if (frame) frame.src = ''; // Clear iframe source to prevent lag
 }
 
 /**
