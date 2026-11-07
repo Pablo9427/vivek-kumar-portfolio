@@ -235,114 +235,139 @@ function animateSwarm() {
 // Start animation sequence
 initSwarm();
 animateSwarm();
+    // ==========================================
+// ROBUST MULTI-ELEMENT SWARM TEXT EFFECT
 // ==========================================
-// FULL-WEBSITE INTERACTIVE SWARM EFFECT
-// ==========================================
-(function initGlobalSwarm() {
-    const canvas = document.getElementById('swarmCanvas');
-    if (!canvas) return;
-
-    const ctx = canvas.getContext('2d');
-    let width = (canvas.width = window.innerWidth);
-    let height = (canvas.height = window.innerHeight);
-
-    let particles = [];
-    const particleCount = 75; // Adjust count for performance & density
-    const mouse = { x: null, y: null, radius: 150 };
-
-    // Track mouse position across the entire page
-    window.addEventListener('mousemove', (e) => {
-        mouse.x = e.clientX;
-        mouse.y = e.clientY;
-    });
-
-    window.addEventListener('mouseleave', () => {
-        mouse.x = null;
-        mouse.y = null;
-    });
-
-    window.addEventListener('resize', () => {
-        width = canvas.width = window.innerWidth;
-        height = canvas.height = window.innerHeight;
-    });
-
-    class GlobalParticle {
-        constructor() {
-            this.x = Math.random() * width;
-            this.y = Math.random() * height;
-            this.baseX = this.x;
-            this.baseY = this.y;
-            this.size = Math.random() * 2 + 1;
-            this.vx = (Math.random() - 0.5) * 1.5;
-            this.vy = (Math.random() - 0.5) * 1.5;
-            // Colors matching your portfolio theme (Indigo / Pink / Gold)
-            const colors = ['#6366F1', '#EC4899', '#FBBF24', '#38BDF8'];
-            this.color = colors[Math.floor(Math.random() * colors.length)];
-            this.ease = 0.05;
-            this.friction = 0.92;
+window.addEventListener('load', () => {
+    document.querySelectorAll('.swarm-text').forEach((el) => {
+        // Prevent duplicate canvas creation if script runs twice
+        if (el.nextElementSibling && el.nextElementSibling.tagName === 'DIV' && el.nextElementSibling.querySelector('canvas')) {
+            return;
         }
 
-        draw() {
-            ctx.fillStyle = this.color;
-            ctx.shadowBlur = 8;
-            ctx.shadowColor = this.color;
-            ctx.beginPath();
-            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-            ctx.closePath();
-            ctx.fill();
-            ctx.shadowBlur = 0; // Reset blur for optimal performance
-        }
+        // Get text content before hiding element
+        const textString = el.getAttribute('data-text') || el.innerText;
+        el.style.display = 'none';
 
-        update() {
-            // Check distance to mouse for swarm interaction
-            if (mouse.x !== null) {
+        // Create container and canvas dynamically
+        const container = document.createElement('div');
+        container.style.position = 'relative';
+        container.style.width = '100%';
+        container.style.minHeight = '90px';
+        container.style.display = 'flex';
+        container.style.justifyContent = 'center';
+        container.style.alignItems = 'center';
+
+        const canvas = document.createElement('canvas');
+        canvas.style.width = '100%';
+        canvas.style.height = '90px';
+        canvas.style.cursor = 'pointer';
+        container.appendChild(canvas);
+
+        el.parentNode.insertBefore(container, el.nextSibling);
+
+        const ctx = canvas.getContext('2d');
+        
+        // Set actual pixel dimensions to match display size
+        const rect = container.getBoundingClientRect();
+        let width = (canvas.width = rect.width || 500);
+        let height = (canvas.height = 90);
+
+        let particles = [];
+        const mouse = { x: null, y: null, radius: 90 };
+
+        canvas.addEventListener('mousemove', (e) => {
+            const bound = canvas.getBoundingClientRect();
+            mouse.x = e.clientX - bound.left;
+            mouse.y = e.clientY - bound.top;
+        });
+
+        canvas.addEventListener('mouseleave', () => {
+            mouse.x = null;
+            mouse.y = null;
+        });
+
+        class SwarmParticle {
+            constructor(targetX, targetY) {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height;
+                this.targetX = targetX;
+                this.targetY = targetY;
+                this.size = Math.random() * 2 + 1.2;
+                this.vx = (Math.random() - 0.5) * 6;
+                this.vy = (Math.random() - 0.5) * 6;
+                this.ease = 0.07;
+                this.friction = 0.82;
+            }
+
+            draw() {
+                ctx.fillStyle = '#6366F1'; // Indigo accent
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.closePath();
+                ctx.fill();
+            }
+
+            update() {
                 let dx = mouse.x - this.x;
                 let dy = mouse.y - this.y;
                 let distance = Math.sqrt(dx * dx + dy * dy);
 
-                if (distance < mouse.radius) {
-                    // Swarm towards the cursor when close
+                if (mouse.x !== null && distance < mouse.radius) {
                     let force = (mouse.radius - distance) / mouse.radius;
                     let angle = Math.atan2(dy, dx);
-                    this.vx += Math.cos(angle) * force * 1.2;
-                    this.vy += Math.sin(angle) * force * 1.2;
+                    this.vx -= Math.cos(angle) * force * 6;
+                    this.vy -= Math.sin(angle) * force * 6;
+                } else {
+                    let targetDx = this.targetX - this.x;
+                    let targetDy = this.targetY - this.y;
+                    this.vx += targetDx * this.ease;
+                    this.vy += targetDy * this.ease;
+                }
+
+                this.vx *= this.friction;
+                this.vy *= this.friction;
+                this.x += this.vx;
+                this.y += this.vy;
+
+                this.draw();
+            }
+        }
+
+        function init() {
+            particles = [];
+            ctx.clearRect(0, 0, width, height);
+            
+            // Draw text temporarily to sample pixels
+            ctx.fillStyle = '#ffffff';
+            ctx.font = '900 32px Inter, sans-serif';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText(textString, width / 2, height / 2);
+
+            const imgData = ctx.getImageData(0, 0, width, height);
+            ctx.clearRect(0, 0, width, height);
+
+            // Scan pixels to generate particle targets (using step 3 for density)
+            for (let y = 0; y < height; y += 3) {
+                for (let x = 0; x < width; x += 3) {
+                    const index = (y * width + x) * 4 + 3;
+                    if (imgData.data[index] > 128) {
+                        particles.push(new SwarmParticle(x, y));
+                    }
                 }
             }
-
-            // Return towards original ambient path (Rebuild behavior)
-            let homeDx = this.baseX - this.x;
-            let homeDy = this.baseY - this.y;
-            this.vx += homeDx * 0.001;
-            this.vy += homeDy * 0.001;
-
-            // Apply friction & movement
-            this.vx *= this.friction;
-            this.vy *= this.friction;
-            this.x += this.vx;
-            this.y += this.vy;
-
-            // Wrap around screen boundaries
-            if (this.x < 0) this.x = width;
-            if (this.x > width) this.x = 0;
-            if (this.y < 0) this.y = height;
-            if (this.y > height) this.y = 0;
-
-            this.draw();
         }
-    }
 
-    // Initialize full-screen swarm particle cluster
-    for (let i = 0; i < particleCount; i++) {
-        particles.push(new GlobalParticle());
-    }
-
-    function animate() {
-        ctx.clearRect(0, 0, width, height);
-        for (let i = 0; i < particles.length; i++) {
-            particles[i].update();
+        function animate() {
+            ctx.clearRect(0, 0, width, height);
+            for (let i = 0; i < particles.length; i++) {
+                particles[i].update();
+            }
+            requestAnimationFrame(animate);
         }
-        requestAnimationFrame(animate);
-    }
 
-    animate();
-})();
+        init();
+        animate();
+    });
+});
