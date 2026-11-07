@@ -37,6 +37,8 @@
     <div class="ambient-orb orb-3"></div>
     <div class="bg-grid-overlay"></div>
 </div>
+<!-- Full-Screen Interactive Swarm Canvas -->
+<canvas id="swarmCanvas" class="fixed inset-0 pointer-events-none z-0 w-full h-full"></canvas>
 
     <!-- Glowing Background Atmosphere Orbs -->
     <div class="fixed top-0 left-1/4 w-96 h-96 bg-indigo-600/15 rounded-full blur-[120px] pointer-events-none"></div>
@@ -89,8 +91,13 @@
                     Based in Ahmedabad, Gujarat. I turn raw product concepts into high-converting e-commerce visual assets, precision packaging die-lines, and photorealistic 3D textile mockups for brands like <strong class="text-white font-bold">Jindal Texofeb Ltd</strong>.
                 </p>
                 
+                <!-- 🌟 INSERT SWARM PARTICLE CANVAS CONTAINER HERE 🌟 -->
+                <div class="relative w-full h-32 my-4 rounded-xl overflow-hidden border border-indigo-500/20 bg-brand-surface/30">
+                    <canvas id="swarmCanvas" class="absolute inset-0 w-full h-full cursor-pointer"></canvas>
+                </div>
+
                 <div class="flex flex-wrap gap-4 pt-4">
-                    <a href="#work" class="bg-gradient-to-r from-indigo-500 to-pink-500 hover:from-indigo-600 hover:to-pink-600 text-white font-black px-7 py-3.5 rounded-xl shadow-lg shadow-indigo-500/20 transition inline-flex items-center gap-2 transform hover:-translate-y-0.5">
+                    <a href="#work" class="bg-gradient-to-r from-indigo-500 to-pink-500 hover:from-indigo-600 hover:to-pink-600 text-white font-black px-7 py-3.5 rounded-xl shadow-lg shadow-indigo-500/25 transition inline-flex items-center gap-2 transform hover:-translate-y-0.5">
                         <i class="fa-solid fa-compass"></i> Explore My Work
                     </a>
                     <a href="#contact" class="bg-slate-800/80 hover:bg-slate-800 border border-indigo-500/30 text-slate-200 font-bold px-7 py-3.5 rounded-xl transition inline-flex items-center gap-2">
